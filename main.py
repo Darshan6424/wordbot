@@ -5,12 +5,14 @@ from datetime import datetime
 from dotenv import load_dotenv
 import os
 
-from utils.keep_alive import keep_alive
+from keep_alive import keep_alive
 from utils.constants import *
 from utils.cogs_loader import load_cogs
+from utils.mongo.mongo import create_db
 
 load_dotenv()
 
+create_db()
 keep_alive()
 
 intents = discord.Intents.all()
