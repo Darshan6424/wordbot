@@ -1,3 +1,4 @@
+# singleton game state instance for use of gamestate across files
 class GameState:
     _instance = None
 

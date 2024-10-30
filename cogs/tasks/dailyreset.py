@@ -53,7 +53,7 @@ class DailyReset(commands.Cog):
     @daily_reset.before_loop
     async def before_daily_reset(self):
         # Wait until the time you want the message to be sent
-        target_time = datetime.time(hour=0, minute=0)  # Set the desired time (e.g., 8 AM)
+        target_time = datetime.time(hour=0, minute=0)  # Set the desired time (e.g., 12 AM)
         now = datetime.datetime.now()
         # Calculate the seconds until the next occurrence of target_time
         next_run = datetime.datetime.combine(now.date(), target_time)

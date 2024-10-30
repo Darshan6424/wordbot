@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from utils.mongo.mongo import user_collection
 
-class UserList(commands.Cog):
+class Leaderboard(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -22,4 +22,4 @@ class UserList(commands.Cog):
 
 # Setup function to add the cog to the bot
 async def setup(bot):
-    await bot.add_cog(UserList(bot))
+    await bot.add_cog(Leaderboard(bot))

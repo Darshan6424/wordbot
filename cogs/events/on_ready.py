@@ -16,6 +16,12 @@ class OnReady(commands.Cog):
                     print(f"Successfully synced application command tree for guild {server_id}")
                 except Exception as e:
                     print(f"Failed to sync for guild {server_id}: {e}")
+        else:
+            try:
+                await self.bot.tree.sync()
+                print(f"Successfully synced application command tree for every guild")
+            except Exception as e:
+                    print(f"Failed to sync for servers: {e}")
                     
         print("synced the application command tree")
         print(f"the bot {self.bot.user} is online")
